@@ -73,7 +73,6 @@ function generateButtons() {
 var pikachuInfo = document.createElement("div");
 var pikachuSeed = getRandomIntInclusive();
 var pikachuDraw = cardValue[pikachuSeed];
-console.log(pikachuDraw);
 pikachuInfo.innerHTML = "Pikachu's draw: " + pikachuDraw;
 
 document.body.appendChild(pikachuInfo);
@@ -81,7 +80,6 @@ document.body.appendChild(pikachuInfo);
 var playerInfo = document.createElement("div");
 var playerSeed = getRandomIntInclusive();
 var playerDraw = cardValue[playerSeed];
-console.log(playerDraw);
 
 document.body.appendChild(playerInfo);
 
