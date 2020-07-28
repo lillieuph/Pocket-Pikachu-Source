@@ -1,6 +1,5 @@
 var cardValue = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"];
-var pikachuDraw;
-var playerDraw;
+var winner;
 
 function getRandomIntInclusive() {
     let min = 0;
@@ -10,16 +9,28 @@ function getRandomIntInclusive() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function initialDraw() {
-    let pikachuSeed = getRandomIntInclusive();
-    let pikachuDraw = cardValue[pikachuSeed];
-    return pikachuDraw;
+function highBetCheck() {
+    if (pikachuDraw < playerDraw) {
+        var winner = "You win!";
+    } else if (pikachuDraw > playerDraw) {
+        var winner = "You lose!";
+    } else if (pikachuDraw = playerDraw) {
+        var winner = "Draw!";
+    }
+
+    console.log(winner);
 }
 
-function secondDraw() {
-    let playerSeed = getRandomIntInclusive();
-    let playerDraw = cardValue[playerSeed];
-    return playerDraw;
+function lowBetCheck() {
+    if (pikachuDraw > playerDraw) {
+        var winner = "You win!";
+    } else if (pikachuDraw < playerDraw) {
+        var winner = "You lose!";
+    } else if (pikachuDraw = playerDraw) {
+        var winner = "Draw!";
+    }
+
+    console.log(winner);
 }
 
 function generateButtons() {
@@ -27,8 +38,8 @@ function generateButtons() {
     highBet.innerHTML = "↑";
 
     highBet.addEventListener("click", function() {
-        alert("Betting high!");
-        secondDraw();
+        playerInfo.innerHTML = "Your draw: " + playerDraw;
+        highBetCheck();
     });
     
     document.body.appendChild(highBet);
@@ -38,32 +49,40 @@ function generateButtons() {
     lowBet.innerHTML = "↓";
 
     lowBet.addEventListener("click", function() {
-        alert("Betting low!");
-        secondDraw();
-        playerInfo.innerHTML = "Your draw: " + secondDraw(playerDraw);
+        playerInfo.innerHTML = "Your draw: " + playerDraw;
+        lowBetCheck();
     });
 
     document.body.appendChild(lowBet);
 
-    var reset = document.createElement("button");
+/*     var reset = document.createElement("button");
     reset.innerHTML = "Reset";
 
     reset.addEventListener("click", function() {
         alert("Pikachu draws a new card");
-        initialDraw();
+        var pikachuInfo = document.createElement("div");
+        var pikachuSeed = getRandomIntInclusive();
+        var pikachuDraw = cardValue[pikachuSeed];
         pikachuInfo.innerHTML = "Pikachu's draw: " + initialDraw(pikachuDraw);
     });
 
-    document.body.appendChild(reset);
+    document.body.appendChild(reset); */
 }
 
-initialDraw();
 
 var pikachuInfo = document.createElement("div");
-pikachuInfo.innerHTML = "Pikachu's draw: " + initialDraw(pikachuDraw);
+var pikachuSeed = getRandomIntInclusive();
+var pikachuDraw = cardValue[pikachuSeed];
+console.log(pikachuDraw);
+pikachuInfo.innerHTML = "Pikachu's draw: " + pikachuDraw;
+
 document.body.appendChild(pikachuInfo);
 
 var playerInfo = document.createElement("div");
+var playerSeed = getRandomIntInclusive();
+var playerDraw = cardValue[playerSeed];
+console.log(playerDraw);
+
 document.body.appendChild(playerInfo);
 
 generateButtons();
