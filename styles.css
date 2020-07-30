@@ -37,3 +37,40 @@
     border-radius: 3px;
     color: white;
 }
+
+#pikainfo {
+    text-align: center;
+    font: 20px Helvetica;
+}
+
+#playinfo {
+    text-align: center;
+    font: 20px Helvetica;
+}
+
+#buttons {
+    padding: 10px 10px;
+    font: 20px Helvetica;
+}
+
+.center {
+    display: block;
+    margin: auto;
+}
+
+#pikaimg { 
+    position: relative;
+}
+
+.pikaheader {
+    background-image: url("img/neutralpika.jpg");
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    font: bold 30px Helvetica;
+    line-height: 200px;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: white;
+}
