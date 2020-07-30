@@ -1,5 +1,5 @@
 # Pocket Pikachu: Source
-The purpose of this website is to provide some information for niche Tamagotchi-esque device called the Pocket Pikachu from 1998. 
+The purpose of this website is to provide some information for a niche Tamagotchi-esque device called the Pocket Pikachu from 1998. 
 
 In addition to that, there will be a recreation of a simple betting card game that was originally included on the device.
 
