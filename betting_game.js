@@ -10,6 +10,10 @@ function getRandomIntInclusive() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+/* The following two functions are used to determine the game result based on player choice of high 
+ or low bet. Different images and text are displayed for the different outcomes. 
+ */
+
 function highBetCheck() {
     var edit_img = document.getElementById("windisplay");
 
@@ -44,6 +48,7 @@ function lowBetCheck() {
     winDisplay.innerHTML = winner;
 }
 
+//Creates the buttons that make the magic happen O_O
 function generateButtons() {
     var highBet = document.createElement("button");
     highBet.innerHTML = "↑";
@@ -84,12 +89,13 @@ function generateButtons() {
     document.body.appendChild(reset);
 }
 
+//Creates div for win condition display and displays initial picture at game start
 var winDisplay = document.createElement("div");
 winDisplay.setAttribute("id", "windisplay");
 winDisplay.setAttribute("class", "pikaheader");
 document.body.appendChild(winDisplay);
 
-
+//Creates div for Pikachu's card draw, auto draws and then displays said draw
 var pikachuInfo = document.createElement("div");
 pikachuInfo.setAttribute("id", "pikainfo");
 var pikachuSeed = getRandomIntInclusive();
@@ -98,6 +104,7 @@ var pikachuDrawHmn = humanValue[pikachuSeed];
 pikachuInfo.innerHTML = "Pikachu's draw: " + pikachuDrawHmn;
 document.body.appendChild(pikachuInfo);
 
+//Creates div to display player's draw after betting
 var playerInfo = document.createElement("div");
 var playerSeed = getRandomIntInclusive();
 var playerDraw = cardValue[playerSeed];
