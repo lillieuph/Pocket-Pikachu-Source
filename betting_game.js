@@ -1,3 +1,8 @@
+/* If you happen to wonder why I did this the way I did as far as creating HTML elements
+entirely inline; it is because it seemed like a fun challenge to try to make something that can
+function standalone once the script is loaded via HTML. :) */
+
+
 const cardValue = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 const humanValue = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"];
 var winner;
@@ -76,7 +81,8 @@ function generateButtons() {
     });
 
     document.body.appendChild(lowBet);
-
+    
+    //refreshes the page
     var reset = document.createElement("button");
     reset.innerHTML = "Reset";
     reset.setAttribute("class", "center");
