@@ -5,5 +5,3 @@ In addition to that, there will be a recreation of a simple betting card game th
 
 # Game Instructions
 Pikachu will be first to draw a card, which happens automatically and upon pressing reset. You can choose to either bet that the card you draw will be greater or lesser than Pikachu's card. When you press the button, the game will display what card you drew and the outcome.
-
-If you have any questions or concerns, please direct them to the contact form on the website.
